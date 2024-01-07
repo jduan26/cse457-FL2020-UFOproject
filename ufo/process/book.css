@@ -1,0 +1,72 @@
+body{
+	font-family: 'Space Mono', monospace;
+	width:80%;
+	margin:auto;
+	margin-top:3em;
+	background-color: #212729;
+	color:white;
+	margin-bottom:6em;
+}
+
+h1{
+	color:#80CF9C;
+}
+
+h2{
+	margin: 1.5em 0 0.5em 0;
+	color:#80CF9C;
+	font-size: 1.5em;
+}
+
+h3{
+	font-weight: 400;
+	font-size: 1em;
+	margin: 0 0 0.5em 0;
+}
+
+.sketch{
+	text-align: center;
+	display:flex;
+	flex-direction: row;
+}
+
+.portrait{
+	height:350px;
+	width:auto;
+}
+.sonia{
+	display:flex;
+	flex-direction: column;
+}
+.sketches{
+	margin:5px;
+	height:350px;
+}
+.sonia img{
+	height:33%;
+}
+
+.final{
+	margin:5px;
+	height:500px;
+}
+
+p {
+	display: inline-block;
+	margin: 0 0 1em 0;
+	padding: 0;
+	font-size: 1em;
+}
+
+.sketch > p{
+	width: 35%;
+	text-align: left;
+	margin: 0 6em;
+}
+
+a{
+	color:white;
+}
+a:visited{
+	color:#80CF9C;
+}

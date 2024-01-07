@@ -1,0 +1,346 @@
+body{
+	width:80%;
+	margin:auto;
+	font-family: 'Space Mono', monospace;
+	background-color: #212729;
+	color: #fff;
+}
+
+.modal-content{
+	background-color: #212729;
+	color: #fff;
+}
+.modal-highlight{
+	color:#51FFC0;
+}
+button.close{
+	background-color:#51FFC0;
+}
+
+header {
+	position: relative;
+	width: 100%;
+	padding: 8% 0 4% 0;
+	/* text-align: center; */
+	margin: 0;
+}
+
+h1 {
+	font-size: 3em;
+	color: #51FFC0;
+	margin-top: 3%;
+	/* text-transform: uppercase; */
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1em;
+	margin-top: 1%;
+}
+
+a {
+	color: #aaffe3;
+	transition: 0.3s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.yearPoint {
+	fill: #E2E6EA;
+}
+
+#map{
+	width: 100%;
+   	height: 400px;
+}
+
+#timeline-container {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#timeline{
+	overflow:scroll;
+	padding: 0 0 1% 0;
+	margin-bottom: 1%;
+}
+
+#left-arrow {
+	left: 0;
+}
+
+#right-arrow {
+	right: 0;
+}
+
+#timelineSVG ::-webkit-scrollbar {
+	height: 10px;
+}
+
+#timelineSVG ::-webkit-scrollbar-track {
+	border: 1px solid #E2E6EA;
+}
+
+#timelineSVG ::-webkit-scrollbar-thumb {
+	background: #51FFC0;
+}
+
+.shapeRect {
+	fill: #E2E6EA;
+	transition: 0.3s;
+}
+
+.shapeButton {
+	fill: #212729;
+	transition: 0.3s;
+}
+
+.shapeRect:hover {
+	fill: #fff;
+	cursor: pointer;
+}
+
+.shapeButton:hover {
+	cursor: pointer;
+}
+
+#shape_select {
+	width:100%;
+	overflow-x:scroll;
+}
+
+#shapeTitle {
+	fill: #51FFC0;
+	text-anchor: left;
+}
+
+#decadeSelect ul {
+	list-style: none;
+}
+
+#decadeSelect ul li {
+	display: inline;
+}
+
+.yearPoint:hover {
+	fill: #51FFC0;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.yearPointText {
+	text-anchor: middle;
+	transform: translate(0, 10px);
+	font-size: 11pt;
+}
+
+.highlightedYear {
+	fill: #51FFC0;
+	z-index: 5;
+}
+
+.highlighted text {
+	fill: #51FFC0;
+}
+
+.highlighted .shapeRect {
+	fill: #212729;
+}
+
+.tLine {
+	z-index: 0;
+}
+
+#selected{
+	display:flex;
+	flex-direction: column;
+	margin-top: 2%;
+}
+
+#graphContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.stateSection{
+	position:relative;
+	display:block;
+}
+
+.linePoint {
+	fill: #28d394;
+}
+
+.linePoint:hover {
+	fill: #E2E6EA;
+	cursor: pointer;
+}
+
+.tooltipHeader h4 {
+	background: #1cb694;
+	color: #E2E6EA;
+	padding: 5px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	font-size: 12pt;
+	margin: 0;
+}
+
+.tooltipBody {
+	background: #E2E6EA;
+	color: #212729;
+	padding: 5px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-size: 8pt;
+	margin: 0;
+}
+
+
+#closeButton {
+	float: right;
+	position:absolute;
+	right:0;
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+#closeButton:hover {
+	cursor: pointer;
+}
+
+.axisLabel {
+	font-size: 10pt;
+	font-family: 'Space Mono', monospace;
+	fill: #fff;
+}
+
+.info{
+	text-align: right;
+	color:#FFF;
+	background-color:#212729;
+	padding:10px 20px;
+	border-radius: 10px;
+}
+
+.marker-cluster-small {
+	background-color: rgba(181, 226, 140, 0.6);
+	}
+.marker-cluster-small div {
+	background-color: rgba(110, 204, 57, 0.6);
+	}
+
+.marker-cluster-medium {
+	background-color: rgba(241, 211, 87, 0.6);
+	}
+.marker-cluster-medium div {
+	background-color: rgba(240, 194, 12, 0.6);
+	}
+
+.marker-cluster-large {
+	background-color: rgba(253, 156, 115, 0.6);
+	}
+.marker-cluster-large div {
+	background-color: rgba(241, 128, 23, 0.6);
+	}
+
+.marker-cluster {
+	background-clip: padding-box;
+	border-radius: 20px;
+	}
+.marker-cluster div {
+	width: 30px;
+	height: 30px;
+	margin-left: 5px;
+	margin-top: 5px;
+
+	text-align: center;
+	border-radius: 15px;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+.marker-cluster span {
+	line-height: 30px;
+	}
+
+/** help **/
+.glitch, .glow {
+  animation: glitch 3s 3s infinite;
+}
+
+.glitch::before, .glitch::after, .glow::before, .glow::after {
+  position: absolute;
+  overflow: hidden;
+  background-color: #212729;
+  margin: 0;
+  left: 0;
+  right: 0;
+}
+
+.glitch::before, .glow::before {
+  content: attr(data-text);
+  text-shadow: -5px 0 #5DE9FF;
+  animation: noise-1 2s linear infinite alternate-reverse, glitch 3s 3.05s infinite;
+  margin-left: -0.05%;
+}
+
+.glitch::after, .glow::after {
+  content: attr(data-text);
+  text-shadow: -5px 0 magenta;
+  animation: noise-2 2s linear infinite alternate-reverse, glitch 3s 3s infinite;
+  margin-left: -0.1%;
+}
+
+@keyframes glitch {
+  1%{
+    transform: rotate(10deg) skewX(90deg);
+  }
+  2%{
+    transform: rotate(0deg) skewX(0deg);
+  }
+}
+
+@keyframes glitch-2 {
+  1%{
+    transform: rotate(10deg) skewX(80deg);
+  }
+  2%{
+    transform: rotate(0deg) skewX(0deg);
+  }
+}
+
+@keyframes noise-1 {
+  10% {top: 5; bottom: 87; clip-path: inset(5px 0 87px 0);}
+  20% {top: 25; bottom: 59; clip-path: inset(25px 0 59px 0);}
+  30% {top: 96; bottom: 4; clip-path: inset(96px 0 4px 0);}
+  40% {top: 37; bottom: 55; clip-path: inset(37px 0 55px 0);}
+  50% {top: 44; bottom: 9; clip-path: inset(44px 0 9px 0);}
+  60% {top: 16; bottom: 68; clip-path: inset(16px 0 68px 0);}
+  70% {top: 94; bottom: 2; clip-path: inset(94px 0 2px 0);}
+  80% {top: 62; bottom: 12; clip-path: inset(62px 0 12px 0);}
+  90% {top: 14; bottom: 53; clip-path: inset(14px 0 53ps 0);}
+  100% {top: 61; bottom: 39; clip-path: inset(61px 0 39px 0);}
+}
+
+@keyframes noise-2 {
+  10% {top: 53; bottom: 15; clip-path: inset(53px 0 15px 0);}
+  20% {top: 35; bottom: 50; clip-path: inset(35px 0 50px 0);}
+  30% {top: 49; bottom: 4; clip-path: inset(49px 0 4px 0);}
+  40% {top: 23; bottom: 10; clip-path: inset(23px 0 10px 0);}
+  50% {top: 61; bottom: 29; clip-path: inset(61px 0 29px 0);}
+  60% {top: 40; bottom: 24; clip-path: inset(40px 0 24px 0);}
+  70% {top: 36; bottom: 14; clip-path: inset(36px 0 14px 0);}
+  80% {top: 74; bottom: 21; clip-path: inset(74px 0 21px 0);}
+  90% {top: 92; bottom: 5; clip-path: inset(92px 0 5px 0);}
+  100% {top: 2; bottom: 95; clip-path: inset(2px 0 97px 0);}
+}
